@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ProductCard.css';  // ✅ Fixed - P Capital
+import './ProductCard.css';  
 
 const ProductCard = ({ product, onAddToCart }) => {
   const [isHovered, setIsHovered] = useState(false);
