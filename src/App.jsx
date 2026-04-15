@@ -8,23 +8,17 @@ function App() {
 
   const handleAddToCart = () => {
     setCartCount(cartCount + 1);
-    console.log("Add to cart 🛒");
   };
 
   return (
     <div className="App">
       <header>
-        <h1>🛍️ Our Product Store</h1>
-        <div>🛒 Cart: {cartCount} items</div>
+        <h1>🛍️ Product Store</h1>
+        <p>Cart: {cartCount} items</p>
       </header>
-
-      <div className="products-grid">
-        {products.map(product => (
-          <ProductCard 
-            key={product.id}
-            product={product}
-            onAddToCart={handleAddToCart}
-          />
+      <div className="grid">
+        {products.map(p => (
+          <ProductCard key={p.id} product={p} onAddToCart={handleAddToCart}/>
         ))}
       </div>
     </div>
